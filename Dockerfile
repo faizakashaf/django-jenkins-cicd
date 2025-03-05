@@ -2,6 +2,9 @@ FROM python:3
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y python3-distutils python3-setuptools
+
+
 RUN pip install django==3.2
 
 COPY . .
